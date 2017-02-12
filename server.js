@@ -41,5 +41,5 @@ app.get('/onepage', function(req, res) {
     res.render('pages/onepage');
 });
 
-app.listen(8080);
-console.log('8080 is the magic port');
+//app.listen(8080);
+//console.log('8080 is the magic port');
