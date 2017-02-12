@@ -3,10 +3,13 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 8080;
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
 
 // use res.render to load up an ejs view file
 
@@ -43,3 +46,6 @@ app.get('/onepage', function(req, res) {
 
 //app.listen(8080);
 //console.log('8080 is the magic port');
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
